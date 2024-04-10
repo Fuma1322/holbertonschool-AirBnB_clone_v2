@@ -21,13 +21,14 @@ def c_text(text):
     """ Prints a Message when /c/<text> is called """
     return 'C {}'.format(text.replace('_', ' '))
 
+
+@app.route('/python/', defaults={'text': 'is cool'}, strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def python_text(text):
-    """ Prints a Message when /c/<text> is called """
+    """ Prints a Message when /python/<text> is called """
     return 'Python {}'.format(text.replace('_', ' '))
 
 
 if __name__ == "__main__":
     """ Main Function """
     app.run(host='0.0.0.0', port=5000)
-
