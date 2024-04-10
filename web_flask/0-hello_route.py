@@ -1,8 +1,12 @@
-#0.hello_Flask
+#!/usr/bin/python3
+
 from flask import flask
 
 app = Flask(_name_)
 
-@app.route("/")
+@app.route("/", strict_slashes=False)
 def hello():
     return "Hello HBNB!"
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
