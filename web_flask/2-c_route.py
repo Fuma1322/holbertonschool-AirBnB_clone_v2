@@ -15,13 +15,13 @@ def hbnb():
     """ Prints a Message when /hbnb is called """
     return 'HBNB'
 
+
 @app.route('/c/<text>', strict_slashes=False)
-def c_text():
+def c_text(text):
     """ Prints a Message when /c/<text> is called """
-    return 'C {}'.format(escape(text).replace('_',''))    
+    return 'C {}'.format(text.replace('_', ' '))
 
 
 if __name__ == "__main__":
     """ Main Function """
     app.run(host='0.0.0.0', port=5000)
-
