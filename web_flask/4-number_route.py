@@ -28,13 +28,13 @@ def python_text(text):
     """ Prints a Message when /python/<text> is called """
     return 'Python {}'.format(text.replace('_', ' '))
 
+
 @app.route('/number/<int:n>', strict_slashes=False)
 def number(n):
-    """ Prints 'n is a number' if n is an integer """
-    return '{} is a number'.format(n)   
+    """ Prints a Message when /number/<n> is called """
+    return '{} is a number'.format(n)
 
 
 if __name__ == "__main__":
     """ Main Function """
     app.run(host='0.0.0.0', port=5000)
-
