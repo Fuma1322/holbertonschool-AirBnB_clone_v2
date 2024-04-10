@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-
+""" Starting A Flask Web Application"""
 from flask import flask
 
 app = Flask(_name_)
 
-@app.route("/", strict_slashes=False)
-def hello():
+@app.route('/', strict_slashes=False)
+def hello_hbnb():
     return "Hello HBNB!"
 
 if __name__ == '__main__':
